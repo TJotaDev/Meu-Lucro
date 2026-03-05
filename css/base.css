@@ -1,0 +1,165 @@
+/*Cores do sistema*/
+:root {
+    --bg-color: #FEF9F3;
+    --primary: #FB7D87;
+    --primary-transparent: #fb7d8728;
+    --secondary: #BDA0EC;
+    --teal: #45AFB4;
+    --warning: #FDBD74;
+    --text-dark: #333;
+    --card-white: #feecee;
+    --card-white-hover: #ffffff;
+}
+/*Formatação Geral*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Montserrat", sans-serif;
+}
+/*Formatação do Body*/
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+
+/*Configurações da Navbar no Desktop*/
+@media (min-width: 769px){  
+/*Navbar*/
+header{
+    border:0.1px solid var(--primary-transparent);
+    border-radius: 10px;
+    position: fixed;
+    left: 0;
+    padding: 20px 30px;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    z-index: 3;
+}
+/*Div da logo e slogan*/
+.inicio{
+    display: flex;
+    flex-direction: column;
+}
+/*Logo*/
+.logo{
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+/*Slogan*/
+.slogan{
+    font-size: 10px;
+    font-weight: 300;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+/*Div da Navbar*/
+.navbar{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 20%;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+}
+/*Opções da Navbar*/
+.opcoes{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/*Telas da Navbar*/
+.nav-item{
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-dark);
+    height: 45px;
+    width: 100%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10%;
+}
+/*Opção da Navbar Hover*/
+.nav-item:hover{
+    color: var(--text-dark);
+    background-color: var(--card-white-hover);
+    border-radius: 30px;
+}
+/*Opção da Navbar Ativa*/
+.nav-item.active{
+    background-color: var(--card-white);
+    color: var(--primary);
+    font-weight: 600;
+}
+}
+
+/*Configurações da Navbar no mobile*/
+@media (max-width: 768px){
+    header{
+        border:none;
+        border-top: 1px solid var(--primary-transparent); 
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+        height: 70px;
+        position: fixed;
+        bottom: 0;
+        z-index: 3;
+        padding: 0;
+        background-color: var(--bg-color); /* Fundo da barra */
+    }
+    .inicio{
+        display: none;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+        padding: 0 10px;
+    }
+    .opcoes, .configuracoes{
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        align-items: center;
+        gap: 10px;
+    }
+    .opcoes{
+        flex: 1;
+        justify-content: space-around;
+        padding-right: 20px;
+    }
+    .nav-item {
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+        padding: 0;
+        border-radius: 50%;
+    }
+    .nav-item.active {
+        background-color: var(--card-white);
+        color: var(--primary);
+    }
+    .nav-item svg {
+        width: 24px;
+        height: 24px;
+        margin: auto;
+    }
+    span{
+        display: none;
+    }
+}
