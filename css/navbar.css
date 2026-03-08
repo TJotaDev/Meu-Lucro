@@ -2,16 +2,17 @@
 @media (min-width: 769px) {
   /*Navbar*/
   header {
-    border: 0.1px solid var(--primary-transparent);
-    border-radius: 10px;
     position: fixed;
     left: 0;
-    padding: 20px 30px;
-    width: 20vw;
+    top: 0;
+    height: 100dvh;
+    width: 250px;
+    border: 1px solid #fb7d8738;
+    border-radius: 10px;
+    padding: 40px 20px;
+    z-index: 10;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    z-index: 3;
   }
   /*Div da logo e slogan*/
   .inicio {
@@ -20,13 +21,13 @@
   }
   /*Logo*/
   .logo {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 800;
     color: var(--text-dark);
   }
   /*Slogan*/
   .slogan {
-    font-size: 10px;
+    font-size: 15px;
     font-weight: 300;
     color: var(--primary);
     text-transform: uppercase;
@@ -35,20 +36,20 @@
   .navbar {
     display: flex;
     flex-direction: column;
-    gap: 50px;
     margin-top: 20%;
     height: 100%;
-    width: 100%;
-    justify-content: space-between;
   }
   /*Opções da Navbar*/
   .opcoes {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    height: 100%;
-    width: 100%;
+    gap: 12px;
+    flex: 100%;
   }
+  #configuracoes {
+  margin-top: auto; 
+  margin-bottom: 20px; /* Um respiro no final da tela */
+}
   /*Telas da Navbar*/
   .nav-item {
     cursor: pointer;
@@ -62,10 +63,6 @@
     align-items: center;
     gap: 10px;
     padding-left: 10%;
-  }
-  li[id="configuracoes"] {
-    margin-top: 100%;
-    bottom: 0;
   }
   /*Opção da Navbar Hover*/
   .nav-item:hover {
@@ -85,57 +82,53 @@
 @media (max-width: 768px) {
   /*Configurações da Navbar*/
   header {
-    border: 1px solid var(--primary-transparent);
+    border: 1px solid #fb7d8738;
     border-radius: 10px;
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 1px 10px;
-    height: 80px;
-    text-align: center;
-    align-items: center;
-    z-index: 3;
+    padding: 0px 15px;
+    height: 70px;
   }
   /*Limpa de nomes*/
-  h1,
-  p,
-  span {
+  h1, p, span {
     display: none;
   }
+  /*Div da Navbar*/
   .navbar {
-    display: flex;
     justify-content: space-between;
     height: 100%;
     width: 100%;
-    text-align: center;
     align-items: center;
   }
+  /*Opções da Navbar*/
   .opcoes {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 100%;
     width: 100%;
-    gap: 5%;
-    text-align: center;
     align-items: center;
+    padding: 0;
   }
+  /*Telas da Navbar*/
   .nav-item {
     cursor: pointer;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
     display: flex;
-    justify-content: center;
-    border-radius: 100%;
-    height: 70%;
-    width: 70%;
-    text-align: center;
     align-items: center;
-    padding: 1%;
+    justify-content: center;
+    flex-shrink: 0;
   }
+  /*Opção da Navbar Ativa*/
   .nav-item.active {
     background-color: var(--card-white);
     color: var(--primary);
     font-weight: 600;
   }
+  /*Icons*/
   svg {
     width: 25px;
     height: 25px;
